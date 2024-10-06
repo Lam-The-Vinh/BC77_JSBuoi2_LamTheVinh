@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/output.css" />
+  </head>
+  <body>
+    <!-- bài tập hiển thị mật khẩu  -->
+    <div class="container mx-auto">
+      <h1 class="text-xl font-bold">Bài tập hiển thị thông tin người dùng</h1>
+      <div>
+        <label class="block mb-2 text-sm font-medium text-gray-900"
+          >Tài Khoản</label
+        >
+        <input
+          type="text"
+          id="taiKhoan"
+          class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-xs"
+          placeholder="nhập tài Khoản"
+        />
+      </div>
+      <div>
+        <label class="block mb-2 text-sm font-medium text-gray-900"
+          >Mật khẩu</label
+        >
+        <div class="relative">
+          <input
+            type="password"
+            id="matKhau"
+            class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-xs"
+            placeholder="nhập mật khẩu"
+          />
+          <i
+            class="fa fa-eye absolute top-2 right-1"
+            onclick="batTatMatKhau()"
+          ></i>
+        </div>
+      </div>
+    </div>
+    <br /><br /><br />
+
+    <!-- bài tập tính lương nhân viên  -->
+    <div class="container mx-auto">
+      <h1 class="text-xl font-bold">bài tập tính lương nhân viên</h1>
+      <div>
+        <label class="block mb-2 text-sm font-medium text-gray-900"
+          >số ngày làm</label
+        >
+        <input
+          type="text"
+          id="soNgayLam"
+          class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-xs"
+          placeholder="nhập số ngày làm"
+        />
+        <button id="tinhLuongNhanVien" class="bg-green-500 p-4 mt-5">
+          Tính
+        </button>
+        <div id="luongNhanVien">Lương nhân viên: <span></span></div>
+      </div>
+    </div>
+    <br /><br /><br />
+
+    <!-- bài tập tính điểm trung bình  -->
+    <div class="container mx-auto">
+      <h1 class="text-xl font-bold">bài tập tính điểm trung bình</h1>
+      <div>
+        <label class="block mb-2 text-sm font-medium text-gray-900"
+          >điểm 1</label
+        >
+        <input
+          type="text"
+          id="diem1"
+          class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-xs"
+          placeholder="nhập điểm 1"
+        />
+      </div>
+      <div>
+        <label class="block mb-2 text-sm font-medium text-gray-900"
+          >điểm 2</label
+        >
+        <input
+          type="text"
+          id="diem2"
+          class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-xs"
+          placeholder="nhập điểm 2"
+        />
+      </div>
+      <div>
+        <label class="block mb-2 text-sm font-medium text-gray-900"
+          >điểm 3</label
+        >
+        <input
+          type="text"
+          id="diem3"
+          class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-xs"
+          placeholder="nhập điểm 3"
+        />
+      </div>
+      <div>
+        <label class="block mb-2 text-sm font-medium text-gray-900"
+          >điểm 4</label
+        >
+        <input
+          type="text"
+          id="diem4"
+          class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-xs"
+          placeholder="nhập điểm 4"
+        />
+      </div>
+      <div>
+        <label class="block mb-2 text-sm font-medium text-gray-900"
+          >điểm 5</label
+        >
+        <input
+          type="text"
+          id="diem5"
+          class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-xs"
+          placeholder="nhập điểm 5"
+        />
+      </div>
+      <button id="tinhDiemTrungBinh" class="bg-green-500 p-4 mt-5">Tính</button>
+      <div id="diemTrungBinh">Điểm Trung Bình: <span></span></div>
+    </div>
+    <br /><br /><br />
+
+    <!-- bài tập quy đổi tiền tệ  -->
+    <div class="container mx-auto">
+      <h1 class="text-xl font-bold">Bài tập quy đổi tiền tệ</h1>
+      <div>
+        <label class="block mb-2 text-sm font-medium text-gray-900"
+          >giá USD</label
+        >
+        <input
+          type="text"
+          id="giaUSD"
+          class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-xs"
+          placeholder="nhập giá USD hiện nay"
+        />
+      </div>
+      <div>
+        <label class="block mb-2 text-sm font-medium text-gray-900"
+          >Số lượng USD cần quy đổi</label
+        >
+        <input
+          type="text"
+          id="quality"
+          class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-xs"
+          placeholder="nhập số lượng USD cần quy đổi"
+        />
+      </div>
+      <button id="tinhTienViet" class="bg-red-500 p-4 mt-5">Tính</button>
+      <div id="tienViet">Tổng số tiền việt: <span></span></div>
+    </div>
+    <br /><br /><br />
+
+    <!-- bài tập tính chu vi và diện tích hình chữ nhật  -->
+    <div class="container mx-auto">
+      <h1 class="text-xl font-bold">
+        bài tập tính chu vi và diện tích hình chữ nhật
+      </h1>
+      <div>
+        <label class="block mb-2 text-sm font-medium text-gray-900"
+          >Chiều dài</label
+        >
+        <input
+          type="text"
+          id="chieuDai"
+          class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-xs"
+          placeholder="nhập chiều dài"
+        />
+      </div>
+      <div>
+        <label class="block mb-2 text-sm font-medium text-gray-900"
+          >Chiều rộng</label
+        >
+        <input
+          type="text"
+          id="chieuRong"
+          class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-xs"
+          placeholder="nhập chiều rộng"
+        />
+      </div>
+      <button id="tinhChuViVaDienTich" class="bg-yellow-500 p-4 mt-5">
+        Tính
+      </button>
+      <div id="chuVi">Chu vi hình chữ nhật: <span></span></div>
+      <div id="dienTich">Diện tích hình chữ nhật: <span></span></div>
+    </div>
+
+    <script src="./js/main.js"></script>
+  </body>
+</html>
